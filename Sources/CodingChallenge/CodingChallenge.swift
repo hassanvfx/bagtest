@@ -60,4 +60,8 @@ extension Bag{
         }
         return item.count
     }
+    
+    var allItems:[ELEMENT]{
+        elements.values.map{$0.element}
+    }
 }
