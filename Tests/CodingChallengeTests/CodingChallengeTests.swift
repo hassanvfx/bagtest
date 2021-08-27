@@ -51,5 +51,6 @@ final class CodingChallengeTests: XCTestCase {
     static var allTests = [
         ("testAdding", testAdding),
         ("testRemoving", testRemoving),
+        ("testAllItems", testAllItems),
     ]
 }

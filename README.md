@@ -18,6 +18,7 @@
  - Make generic
  - Return array of all items
 
+### Adding
 ```
 func testAdding() {
   var bag = Bag<String>()
@@ -33,6 +34,7 @@ func testAdding() {
 }
 ```
 
+### Removing
 ```
 func testRemoving() {
   var bag = Bag<String>()
@@ -50,5 +52,22 @@ func testRemoving() {
     
     bag.remove(element: element)
     XCTAssertEqual(bag.count(element: element), 0)
+}
+```
+
+### All Items
+```
+func testAllItems(){
+    var bag = Bag<String>()
+    let element = "test"
+    bag.add(element: element)
+    bag.add(element: element)
+    bag.add(element: element)
+    
+    XCTAssertEqual(bag.allItems.count, 1)
+    
+    bag.add(element: "test2")
+    
+    XCTAssertEqual(bag.allItems.count, 2)
 }
 ```
